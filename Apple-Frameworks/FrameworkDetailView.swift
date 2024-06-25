@@ -1,36 +1,36 @@
 //
-//  FramworkGridView.swift
+//  FrameworkDetailView.swift
 //  Apple-Frameworks
 //
-//  Created by Aditya Medhane on 21/06/24.
+//  Created by Aditya Medhane on 22/06/24.
 //
 
 import SwiftUI
 
-struct FramworkGridView: View {
-    
-    let columns: [GridItem] = [GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible())]
+struct FrameworkDetailView: View {
+    var framework: Framework
     var body: some View {
-        NavigationView{
-            ScrollView{
-                LazyVGrid(columns: columns){
-                    ForEach(MockData.frameworks){ framework in
-                        FrameworkTitleView(framework: framework)
-                    }
-                }
-            }
-            .navigationTitle("🍏 Frameworks")
-        }
-    }
-
-struct FrameworkGridView_Previews: PreviewProvider{
-        static var previews: some View{
+        VStack{
+            Spacer()
+            FrameworkTitleView(framework: framework)
+            Text(framework.description)
+                .font(.body)
+                .padding()
             
-            FramworkGridView()
+            Spacer()
+            Button {
+                
+            }label: {
+                  AFButton(title: "Learn More")
+            }
         }
     }
+}
 
-    
+#Preview {
+    FrameworkDetailView(framework: MockData.sampleFramework)
+}
+
 struct FrameworkTitleView: View {
         let framework: Framework
         var body: some View {
@@ -49,6 +49,3 @@ struct FrameworkTitleView: View {
             .cornerRadius(10)
         }
     }
-}
-
-
