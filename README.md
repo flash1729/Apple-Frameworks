@@ -48,8 +48,7 @@ Contains the data model for the app:
 
 ### ViewModels
 Contains the view models for the app:
-- `FrameworkGridViewModel.swift`: Manages the data for the framework grid view.
-
+- `FrameworkGridViewModel.swift`: Manages the data for the framework grid view
 ### Views
 Contains the SwiftUI views of the app:
 - **App**: Main entry point of the app.
@@ -62,18 +61,6 @@ Contains the SwiftUI views of the app:
   - `SafariView.swift`
   - `XDismissButton.swift`
   - `AFButton.swift`
-
-### Utilities
-Contains utility functions and classes used throughout the app.
-
-### Extensions
-Contains extensions for existing Swift/SwiftUI classes or types.
-
-### Assets
-Contains the asset catalog for images, colors, etc.
-
-### Preview Content
-Contains preview content for SwiftUI previews.
 
 ### Tests
 Contains unit tests and UI tests:
