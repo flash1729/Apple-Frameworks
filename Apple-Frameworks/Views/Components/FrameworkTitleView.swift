@@ -1,35 +1,11 @@
 //
-//  FrameworkDetailView.swift
+//  FreameworkTitleView.swift
 //  Apple-Frameworks
 //
-//  Created by Aditya Medhane on 22/06/24.
+//  Created by Aditya Medhane on 30/06/24.
 //
 
 import SwiftUI
-
-struct FrameworkDetailView: View {
-    var framework: Framework
-    var body: some View {
-        VStack{
-            Spacer()
-            FrameworkTitleView(framework: framework)
-            Text(framework.description)
-                .font(.body)
-                .padding()
-            
-            Spacer()
-            Button {
-                
-            }label: {
-                  AFButton(title: "Learn More")
-            }
-        }
-    }
-}
-
-#Preview {
-    FrameworkDetailView(framework: MockData.sampleFramework)
-}
 
 struct FrameworkTitleView: View {
         let framework: Framework
@@ -49,3 +25,7 @@ struct FrameworkTitleView: View {
             .cornerRadius(10)
         }
     }
+
+#Preview {
+    FrameworkTitleView(framework: MockData.frameworks[1])
+}
